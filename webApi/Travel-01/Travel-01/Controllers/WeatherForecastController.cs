@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Travel_01.models;
 
 namespace Travel_01.Controllers
 {
@@ -27,6 +28,11 @@ namespace Travel_01.Controllers
         public IEnumerable<WeatherForecast> Get()
         {
             var rng = new Random();
+            string dir = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+            string file = dir + @"\data\data.json";
+
+            //var root = Newtonsoft.Json.JsonConvert.DeserializeObject<Destination>(jsonStirng);
+
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
