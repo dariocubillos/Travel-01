@@ -1,8 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Travel_01.models;
 
@@ -31,7 +34,12 @@ namespace Travel_01.Controllers
             string dir = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
             string file = dir + @"\data\data.json";
 
-            //var root = Newtonsoft.Json.JsonConvert.DeserializeObject<Destination>(jsonStirng);
+            JArray o1 = JArray.Parse(new StreamReader(file, Encoding.UTF8).ReadToEnd());
+
+
+
+
+
 
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
