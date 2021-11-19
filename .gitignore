@@ -1,0 +1,6 @@
+*.suo
+
+webAPI/Travel-01/Travel-01/bin/*
+webAPI/Travel-01/Travel-01/obj/*
+
+webAPI/Travel-01/.vs/Travel-01/config/applicationhost.config
