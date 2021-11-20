@@ -1,25 +1,29 @@
 /* app css stylesheet */
 
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+.title-destination {
+  writing-mode: tb-rl;
+  position: absolute;
+  padding-top: 5%;
+  background-color: #0202026b;
+  color: whitesmoke;
+  font-size: 24px;
 }
 
-.menu:before {
-  content: "[";
+.main-content {
+  width: 700px;
+  height: 1000px;
+  overflow-y: scroll;
 }
 
-.menu:after {
-  content: "]";
+.custom-table {
+  table-layout: fixed;
 }
 
-.menu > li {
-  display: inline;
+.image-default {
+  width: 200px;
+  height: 200px;
 }
 
-.menu > li + li:before {
-  content: "|";
-  padding-right: 0.3em;
+.title-image {
+  font-size: 24px;
 }

@@ -1,1 +1,9 @@
-<h1>{{unix}}</h1>
+<div class="px-4">
+  <h1 class="title-page">Destinations</h1>
+  <div class="row main-content">
+    <div class="col-4 pt-2" ng-repeat="destination in destinations">
+      <span class="title-destination">{{destination.company}}</span>
+      <img class="image-default" alt="" ng-src="{{ destination.image_List.split('|')[0] }}" />
+    </div>
+  </div>
+</div>
