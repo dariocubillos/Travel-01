@@ -8,5 +8,10 @@ angular.module('myApp.destination', ['ngRoute'])
     controller: 'DestinationCtrl'
   });
 }])
-.controller('DestinationCtrl', [ function() {  
-}]);
+.controller('DestinationCtrl',   function($scope ,$http ) { 
+  $scope.unix= "meta";
+
+  $http.get('http://localhost:30502/destination').then(function (response) {
+            console.log(response);
+        })
+});
